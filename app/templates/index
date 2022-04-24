@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>A A Folou</title>
+<!-- centraliza as imagens-->
+<style>
+.center {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+padding: 10px;
+max-width:500px;
+}
+</style>
+</head>
+<body>
+<!--   Neste div importamos as imagem da pasta img dentro da pasta Static dentro-->
+	<div style="max-width:500px" >
+		<img class="slides" src="{{url_for('static', filename='img/img1.jfif')}}" alt="dog">
+		<img class="slides" src="{{url_for('static', filename='img/img2.jfif')}}" alt="dog">
+		<img class="slides" src="{{url_for('static', filename='img/img3.jfif')}}" alt="dog">
+	</div>
+	<script>
+	var myIndex = 0;
+	carousel();
+	/* Definimos a configuraçao de nosso carrossel de imagens*/
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("slides");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  setTimeout(carousel, 2000); // Muda a imagem a cada 2 segundos
+	}
+</script>
+</body>
+<!-- por João-Pedro-MW-->
+</html>
