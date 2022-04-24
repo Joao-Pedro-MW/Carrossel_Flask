@@ -7,4 +7,5 @@ if __name__ == "__main__":
 #abra o prompt de comando na pasta raiz em que o arquivo run.py está
 #set FLASK_APP = run.py
 #set FLASK_ENV = production ou  development
-#flask run --host=0.0.0.0 para rodar localmente em uma LAN
+#flask run (para rodar em sua máquina)
+#flask run --host=0.0.0.0 (para rodar localmente em uma LAN)
