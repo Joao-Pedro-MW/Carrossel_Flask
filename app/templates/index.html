@@ -24,9 +24,9 @@ max-width:500px;
 	</div>
 	<script>
 	var myIndex = 0;
-	carousel();
+	carrossel();
 	/* Definimos a configuraçao de nosso carrossel de imagens*/
-	function carousel() {
+	function carrossel() {
 	  var i;
 	  var x = document.getElementsByClassName("slides");
 	  for (i = 0; i < x.length; i++) {
@@ -35,9 +35,9 @@ max-width:500px;
 	  myIndex++;
 	  if (myIndex > x.length) {myIndex = 1}    
 	  x[myIndex-1].style.display = "block";  
-	  setTimeout(carousel, 2000); // Muda a imagem a cada 2 segundos
+	  setTimeout(carrossel, 5000); // Muda a imagem a cada 5 segundos
 	}
 </script>
 </body>
-<!-- por João-Pedro-MW-->
+<!-- por João-Pedro-MW -->
 </html>
